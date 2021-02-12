@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+div {
+  border: 5px solid red;
+}
+
+svg {
+  width: 100vh;
+  height: 100vh;
+  transform-origin: 0% 0%;
+  transform-box: scale(1000);
+}
+
+@keyframes fade-in-Out {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.1;
+  }
+}
+.dots {
+  fill: rgb(241, 241, 241);
+  opacity: 0;
+  animation-delay: 0;
+  animation: fade-in-Out linear forwards;
+}
+
+.capo {
+  fill: rgb(190, 190, 190);
+  fill-opacity: 0.25;
+
+  stroke: url(#capo-gradient);
+  stroke-width: 3;
+}
